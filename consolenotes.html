@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Console Notes</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div class="main-body">
+        <header>
+            <h1>Front End Development - Class Notes</h1>
+            <h2>- Console Notes -</h2>
+            <p class="soft-link">|
+                    <a href="index.html">Home</a> |
+                    <a href="forms.html">Forms</a> |
+                    <a href="consolenotes.html">Console</a> |
+                </p>
+        </header>
+
+        <main>
+            <article>
+                <div>
+                    <h3>Discovering the file system</h3>
+                </div>
+                <div>
+                    <h4>ls</h4>
+                    <p>list files and folder in directory</p>
+        
+                    <h4>ls -l</h4>
+                    <p>-l lists long form of files and folder. shows permissions, ownership, group owner, filesize, and date/time.</p>
+        
+                    <h4>ls -a</h4>
+                    <p>-a lists all files and directories including hidden files and folder</p>
+        
+                    <h4>clear</h4>
+                    <p>clears the screen and moves prompt to top of screen. You can still scroll up to see previous commands.</p>
+        
+                    <h4>pwd</h4>
+                    <p>Prints working directory.</p>
+        
+                    <h4>cd</h4>
+                    <p>Change Directory - moves to another directory.
+                        <br> cd .. goes up a directory
+                        <br>
+                    </p>
+        
+                </div>
+            </article>
+        
+            <article class="main-topics">
+                    <div>
+                        <h3>Viewing and editing text files</h3>
+                    </div>
+
+                    <h4>nano</h4>
+                    <p>text editor</p>
+
+
+        
+            </article>
+
+            <article>
+                <div>
+                    <h3>Processes</h3>
+
+                    <h4>top</h4>
+                    <p>gives up-to-date info of processes running on machine.</p>
+
+                    <h4>?</h4>
+                    <p>brings up functions we can do.  'q' exits program</p>
+
+                    <h4>ps</h4>
+                    <p>lists out processes in a simple manner.  Returns immediately to command prompt.</p>
+
+                    <h4>ps aux</h4>
+                    <p>displays all process for all users (x)</p>
+
+                    <h4>ps aux | grep "top"</h4>
+                    <p> uses 'grep' to search only 'top'</p>
+                    /div>
+                </article>
+                <article>
+                    <div>
+                    <h3>Managing Jobs</h3>
+                    <p>If terminal only has one instance at a time, pause job.</p>
+
+                    <h4>ctrl+z</h4>
+                    <p>command to use within terminal application to go back to command prompt.  the terminal application is still going in the background.</p>
+
+                    <h4>fg</h4>
+                    <p>resumes the last stopped process.  if multile jobs of same thing is going on (i.e. nano) use:</p>
+
+                    <p>fg</p> 
+                    <p>or whatever the number of the job is going on.  Use 'jobs' to see the jobs going on.</p>
+
+                    <h4>jobs</h4>
+                    <p>prints the list of jobs in session.</p>
+                    
+
+                </div>
+            
+            </article>
+
+            <article>
+                <div>
+                    <h3>killing processes</h3>
+
+                    <h4>ctrl+c</h4>
+                    <p>sends the TERM signal to the current process.  cleans up nicely.</p>
+
+                    <h4>kill</h4>
+                    <p>kills a process.  find process id, and use syntax 'kill xxxx'.  xxxx being the PID.</p>
+                    
+                    <h4>kill -TERM xxx</h4>
+                    <p> kills it in a nice way.  cleanup and stop.</p>
+                    
+                    <h4>kill -KILL xxx</h4>
+                    <p>immediate kill of process.  use with care.</p>
+
+                    <h4>kill -STOP</h4>
+                    <p>this command is just like using ctrl+z</p>
+
+                </div>
+
+                </article>
+
+                <article>
+                    <h3>Enviroment Variables</h3>
+
+                    <h4>env</h4>
+                    <p>prints out all enviroment variables</p>
+
+                    <h4>echo</h4>
+                    <p>echos back the command we give it.<br>
+                    echo $HOME'  echos the value of 'home' which is the home directory<br></p>
+
+                    <h4>PS1</h4>
+                    <p>ps1="\w >"  changes the prompt</p>
+
+                    <h4>bash</h4>
+                    <p>starts a new instance of bash.  use 'exit' to get out if it.</p>
+
+                    <h4>export MESSAGE="Hi world"</h4>
+                    <p>makes a variable usable in other instances. (message is just an example.</p>
+
+                    <h4>echo $PATH</h4>
+                    <p>shows a path</p>
+
+                    <h4>which echo</h4>
+                    <p>shows echo executable</p>
+
+                    <h4></h4>
+                </article>
+
+                <article>
+                    <h3>FIND and GREP</h3>
+
+                    <h4>find</h4>
+                    <p>find . -name "how_to_go_home.txt"  finds what directory the .txt file is located.</p>
+
+                    <h4>find / -name "sudoer"</h4>
+                    <p>finds the file named sudoer starting at '/' root on the entire system.</p>
+
+                    <h4>find documents bin -name "how_to_go_home.txt"</h4>
+                    <p>lookes for the file within directories of 'documents' and 'bin'</p>
+
+                    <h4>grep</h4>
+                    <p>searches inside a file for a pattern</p>
+
+                    <h4>grep "is" hello.txt</h4>
+                    <p>looks for 'is' within file listed.</p>
+
+                    <h4>grep -n is "hello.txt"</h4>
+                    <p>finds the word 'is' and lists the line number of the occurance</p>
+
+                    <h4>grep -i this "hello.txt"</h4>
+                    <p>grep is case sensitive.  -i removed the sensitivy</p>
+
+                    <h4>grep -v e "hello.txt"</h4>
+                    <p>returns the lines where 'e' DOES NOT occure.</p>
+
+                    <h4>man grep</h4>
+                    <p>returns the manual for using grep</p>
+
+                    <h4>man find</h4>
+                    <p>returns the manual for using find</p>
+
+                </article>
+
+                <article>
+                    <h3>Pipes '|' and Redirection</h3>
+
+                    <h4>Pipe '|'</h4>
+                    <p>pipes the output of first command to the input of the second command.</p>
+
+                    <h4>grep this > hello.txt</h4>
+                    <p>searches file for 'this'</p>
+
+                    <h4>grep this hello.txt > hello_grep.txt</h4>
+                    <p>searches for all instances of 'this' form hello.txt and put it into a new file called 'hello_grep.txt'</p>
+
+                    <h4>grep line hello.txt >> grep_output.txt</h4>
+                    <p>appends instances of 'line' to end of file grep_output.txt</p>
+
+                    <h4>find / -name "sudoers" 2> error_log.txt</h4>
+                    <p>redirects the output to a file named 'error_log.txt</p>
+
+                    <h4>find / -name "sudoers" 2> /dev/null</h4>
+                    <p>/dev/null is a file that will delete anything written into it.</p>
+
+                    <h4>ps aux | grep bash</h4>
+                    <p>gets the list of processes of a user and uses grep to look only for 'bash' instances.</p>
+
+                    <h4>ps aux | grep bash | sort</h4>
+                    <p>gets users process, looks only for 'bash' then sorts it</p>
+
+                    <h4>ps aux | grep bash | sort > sorted_bash_procs.txt</h4>
+                    <p>gets users processes, looks only for 'bash', then sorts it and creates a file named 'sorted_bash_procs.txt'</p>
+                </article>
+        
+        </main>
+        <footer>
+            <p>notes by C. Davis.</p>
+        </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    background-image: url("img/retro-background.jpg")
+}
+
+h2,
+h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+a:link,
+a:visited {
+    color: white;
+    -webkit-transition: color .5s linear;
+    -moz-transition: color .5s linear;
+    -ms-transition: color .5s linear;
+    -o-transition: color .5s linear;
+    transition: color .5s linear;
+}
+
+a:hover,
+a:active {
+    color: magenta;
+}
+
+.main-body {
+    background-color: #aae6ee;
+    border-right: solid #edf518 10px;
+    border-left: solid #edf518 10px;
+}
+
+header {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url("img/headfoot.jpg");
+    color: magenta;
+}
+
+.topic-header {
+    text-align: center;
+}
+
+article {
+    position: relative;
+    max-width: 350px;
+    background-color: #21a39c;
+    border: solid black 1px;
+    border-radius: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+pre{
+    font-family: monospace;
+    overflow: auto;
+    width: auto;
+    background-color: #eee;
+    width: 300px;
+    max-height: 600px;
+  }
+
+footer {
+    background-color: #555;
+    color: magenta;
+    padding: 20px 0px;
+    background-image: url("img/headfoot.jpg")
+}
+
