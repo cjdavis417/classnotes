@@ -5,8 +5,6 @@
   }
 
 body {
-    max-width: 800px;
-    margin: 0 auto;
     background-image: url("img/retro-background.jpg")
 }
 
@@ -36,6 +34,8 @@ a:active {
     background-color: #aae6ee;
     border-right: solid #edf518 10px;
     border-left: solid #edf518 10px;
+    width: 800px;
+    margin: 0 auto;
 }
 
 header {
@@ -50,15 +50,21 @@ header {
     text-align: center;
 }
 
+#wrapper {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 article {
-    position: relative;
-    max-width: 350px;
     background-color: #21a39c;
     border: solid black 1px;
     border-radius: 5px;
     padding-right: 5px;
     padding-left: 5px;
-    margin: 5px;
+    width: 360px;
+    margin: 5px 5px;
 }
 
 pre{

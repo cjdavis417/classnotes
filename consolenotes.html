@@ -18,6 +18,7 @@
         </header>
 
         <main>
+            <div id="wrapper">
             <article>
                 <div>
                     <h3>Discovering the file system</h3>
@@ -39,15 +40,14 @@
                     <p>Prints working directory.</p>
         
                     <h4>cd</h4>
-                    <p>Change Directory - moves to another directory.
-                        <br> cd .. goes up a directory
-                        <br>
-                    </p>
-        
+                    <p>Change Directory - moves to another directory.</p>
+                    
+                    <h4>cd ..</h4> 
+                    <p>goes up a directory</p>
                 </div>
             </article>
         
-            <article class="main-topics">
+            <article>
                     <div>
                         <h3>Viewing and editing text files</h3>
                     </div>
@@ -77,29 +77,26 @@
 
                     <h4>ps aux | grep "top"</h4>
                     <p> uses 'grep' to search only 'top'</p>
-                    /div>
+                </div>
                 </article>
                 <article>
                     <div>
-                    <h3>Managing Jobs</h3>
-                    <p>If terminal only has one instance at a time, pause job.</p>
+                        <h3>Managing Jobs</h3>
+                        <p>If terminal only has one instance at a time, pause job.</p>
 
-                    <h4>ctrl+z</h4>
-                    <p>command to use within terminal application to go back to command prompt.  the terminal application is still going in the background.</p>
+                        <h4>ctrl+z</h4>
+                        <p>command to use within terminal application to go back to command prompt.  the terminal application is still going in the background.</p>
 
-                    <h4>fg</h4>
-                    <p>resumes the last stopped process.  if multile jobs of same thing is going on (i.e. nano) use:</p>
+                        <h4>fg</h4>
+                        <p>resumes the last stopped process.  if multile jobs of same thing is going on (i.e. nano) use:</p>
 
-                    <p>fg</p> 
-                    <p>or whatever the number of the job is going on.  Use 'jobs' to see the jobs going on.</p>
+                        <p>fg</p> 
+                        <p>or whatever the number of the job is going on.  Use 'jobs' to see the jobs going on.</p>
 
-                    <h4>jobs</h4>
-                    <p>prints the list of jobs in session.</p>
-                    
-
-                </div>
-            
-            </article>
+                        <h4>jobs</h4>
+                        <p>prints the list of jobs in session.</p>
+                    </div>
+                </article>
 
             <article>
                 <div>
@@ -217,7 +214,52 @@
                     <h4>ps aux | grep bash | sort > sorted_bash_procs.txt</h4>
                     <p>gets users processes, looks only for 'bash', then sorts it and creates a file named 'sorted_bash_procs.txt'</p>
                 </article>
-        
+
+                <article>
+                    <h3>Building Software From Source</h3>
+
+                    <h4>sudo apt-get update</h4>
+                    <p>'apt-get' package manager system.  'update' this command will update the package manager on linux box.  good to run every now and again to make sure packages are up-to-date.</p>
+
+                    <h4>sudo apt-get install build-essential</h4>
+                    <p>will install package named 'build-essential'</p>
+
+                    <h4>which make</h4>
+                    <p>'which' will take name of program and show you where it's stored.  'make' is the name of the program.  it's used for building things.  tool used to install packages from source.</p>
+
+                    <h4>curl -O</h4>
+                    <p>program is an app for making internet requests.  -O will save the 'curl'd file to a file on the machine.  next paste the web file after the 'curl -O' </p>
+
+                    <h4>tar -xvf</h4>
+                    <p>tar extracts a file.  -x executs it, -v turns on verbose, -f will say file.  next, paste the file name after the 'tar -xvf'</p>
+
+                    <h4>sudo make install</h4>
+                    <p>installs everything where it needs to be.</p>
+
+                </article>
+
+                <article>
+                    <h3>Introduction to Package Managers</h3>
+
+                    <h4>apt-cache search git</h4>
+                    <p>apt-cache lets you search packages with a particular pattern.  in this case, the pattern is 'git'</p>
+
+                    <h4>sudo apt-get install git</h4>
+                    <p>since 'git' is being used with package manager, it has all the dependencies for it.  makes installing simpler than 'from source' installation.</p>
+
+                    <h4>which git</h4>
+                    <p>can see it's installed and now the command works</p>
+
+                    <h4>sudo apt-get upgrade</h4>
+                    <p>do this command AFTER 'sudo apt-get update'</p>
+
+                    <h4>sudo apt-get remove git</h4>
+                    <p>this command removes 'git' or whatever you put inplace.  It does not remove the dependencies that were installed to install 'git'.  you have to run the command again for those dependencies in particular.</p>
+
+                    
+
+                </article>
+            </div>
         </main>
         <footer>
             <p>notes by C. Davis.</p>
