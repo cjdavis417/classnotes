@@ -15,6 +15,20 @@ h3 {
     text-shadow: 2px 2px 3px black;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Play', sans-serif;
+}
+
+h4, h5, p {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    margin-bottom: 50px;
+}
+
 a:link,
 a:visited {
     color: white;
@@ -50,7 +64,7 @@ header {
     text-align: center;
 }
 
-#wrapper {
+.wrapper {
     width: 800px;
     display: flex;
     flex-wrap: wrap;
