@@ -32,11 +32,11 @@ p {
 a:link,
 a:visited {
     color: white;
-    -webkit-transition: color .5s linear;
-    -moz-transition: color .5s linear;
-    -ms-transition: color .5s linear;
-    -o-transition: color .5s linear;
-    transition: color .5s linear;
+    -webkit-transition: color .25s linear;
+    -moz-transition: color .25s linear;
+    -ms-transition: color .25s linear;
+    -o-transition: color .25s linear;
+    transition: color .25s linear;
 }
 
 a:hover,
@@ -46,8 +46,9 @@ a:active {
 
 .main-body {
     background-color: #aae6ee;
-    border-right: solid #edf518 10px;
-    border-left: solid #edf518 10px;
+    border: solid #edf518 10px;
+    border-radius: 15px;
+    /* border-left: solid #edf518 10px; */
     width: 800px;
     margin: 0 auto;
 }
@@ -58,6 +59,8 @@ header {
     padding-bottom: 10px;
     background-image: url("img/headfoot.jpg");
     color: magenta;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .topic-header {
@@ -81,19 +84,26 @@ article {
     margin: 5px 5px;
 }
 
-pre{
-    font-family: monospace;
+pre {
     overflow: auto;
     width: auto;
     background-color: #eee;
-    width: 300px;
+    width: 345px;
     max-height: 600px;
+    border-radius: 5px;
+  }
+
+  code {
+      font-family: 'VT323', monospace;
+      font-size: 20px;
   }
 
 footer {
     background-color: #555;
     color: magenta;
     padding: 20px 0px;
-    background-image: url("img/headfoot.jpg")
+    background-image: url("img/headfoot.jpg");
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
