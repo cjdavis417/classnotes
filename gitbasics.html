@@ -12,7 +12,7 @@
                         <h1>Front End Development<br>
                             - GIT Basics -
                         </h1>
-                        <p class="soft-link">| <a href="index.html">Home</a> | <a href="forms.html">Forms</a> | <a href="consolenotes.html">Console</a> | <a href="gitbasics.html">GIT Basics</a> |</p>
+                        <h5 class="soft-link">| <a href="index.html">Home</a> | <a href="forms.html">Forms</a> | <a href="consolenotes.html">Console</a> | <a href="gitbasics.html">GIT Basics</a> |</h5>
                     </header>
 
             <main>
@@ -21,7 +21,7 @@
                         <h3>Life Without Version Control</h3>
 
                         <h4>Cowboy Coders</h4>
-                        <p>Coders who don't use version control with a GIT.</p>
+                        <p>Coders who don't follow coding best-practices such as a VCS (Version Control System) like GIT.</p>
 
                     </article>
 
@@ -29,6 +29,66 @@
                         <h3>How Version Control Works</h3>
 
                         <h4></h4>
+                    </article>
+
+                    <article>
+                        <h3>Why Git, and how version control works.</h3>
+
+                        <p>Git was created in large part to help manage the Linux kernel.</p>
+                        <p>Git is a 'distributed' version control system.  This means there is no 'central' repository for any given project; everyone has their own copy of the project they can work with directly.</p>
+
+                        <h4>Repository</h4>
+                        <p>The repository is where all the version control information about a project is stored.</p>
+
+                        <h4>Commit</h4>
+                        <p>In version control, the finish change to a project is a commit.</p>
+
+                        <h4>Plumbing and Porcelain</h4>
+                        <p>Git Commands can be divided into two categories: Plumbing and Porcelain.  The plumbing is the powerful low-level commands that do a lot of the heavy lifting.  Porcelain is the higher level commands that make normal interaction with Git friendly.</p>
+                    </article>
+
+                    <article>
+                        <h3>Git Ready!</h3>
+
+                        <h4>is Git installed?</h4>
+                        <p>Macs, yes.  Linus, yes.  Windows, no.</p>
+
+                        <h4>git --version</h4>
+                        <p>tells you what version of git is installed on your system.</p>
+
+                        <h4>git init my_first_repository</h4>
+                        <p>This command creates a repository called 'my_first_repository'.</p>
+                        <p>Another way to create a repository is to be in your project folder and run the same command WITHOUT a project name.</p>
+
+                        <h4>git add README</h4>
+                        <p>this command adds a file to the version control of git.</p>
+
+                        <h4>git commit</h4>
+                        <p>commits our changes.  a message window opens up for you to make notes about what is included in the commit.  Best practice is to keep the message short and meaningful.</p>
+
+                        <h4>git commit -a -m "message"</h4>
+                        <p>same as above EXCEPT '-a' commits all changes and '-m' allows you to add a message directly without going into an editor to add a message.</p>
+
+                        <h4>git status</h4>
+                        <p>shows us the status of our project.</p>
+
+                        <h4>git log</h4>
+                        <p>shows a log of all our commits.</p>
+
+                        <h4>git checkout 7cbef</h4>
+                        <p>this puts you in a state of where you were with a past commit.  the '7cbef' is a little bit of info to identify with commit to checkout.  after you check out, you can use the folders and files like being in that state.</p>
+
+                        <h4>cat file1</h4>
+                        <p>lets you view the files to see the files to make sure you're in a previous commit.</p>
+
+                        <h4>git checkout master</h4>
+                        <p>goes back to present file/ folder structure</p>
+
+                        <h4>git dif lf4sfsd 4sdfsd</h4>
+                        <p>this command lets you see what was changed between the commits.</p>
+
+
+
                     </article>
 
 
