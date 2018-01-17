@@ -51,7 +51,7 @@
                         <h3>Git Ready!</h3>
 
                         <h4>is Git installed?</h4>
-                        <p>Macs, yes.  Linus, yes.  Windows, no.</p>
+                        <p>Macs, yes.  Linux, yes.  Windows, no.</p>
 
                         <h4>git --version</h4>
                         <p>tells you what version of git is installed on your system.</p>
@@ -87,8 +87,104 @@
                         <h4>git dif lf4sfsd 4sdfsd</h4>
                         <p>this command lets you see what was changed between the commits.</p>
 
+                    </article>
 
+                    <article>
+                        <h3>Beginning to Branch</h3>
 
+                        <h4>Master</h4>
+                        <p>The master branch is always the version deployed in production.</p>
+
+                        <h4>git branch foo_feature</h4>
+                        <p>creates a branch named foo_feature</p>
+
+                        <h4>git checkout foo_feature</h4>
+                        <p>Switchhes to branch named foo_feature.  Notice this is the same command used to switch to a particular commit.</p>
+
+                        <h4>git checkout -b branchName</h4>
+                        <p>this command uses the '-b' argument to create a new branch and switch to it at the same time.</p>
+
+                    </article>
+
+                    <article>
+
+                        <h3>Managing Our Branching</h3>
+
+                        <h4>git branch</h4>
+                        <p>this command will list all your branches.</p>
+
+                        <h4>git branch -D branchName</h4>
+                        <p>This command will delete the named branch.</p>
+
+                    </article>
+
+                    <article>
+                        <h3>Introduction to Merging</h3>
+
+                        <h4>git merge branchName</h4>
+                        <p>Be on the branch you want to merge to.  This command will merge the branchName to the one you are currantly on.  Then you can use command 'git log' to verify the merge happened and the log should show the commits that were in the branchName.</p>
+
+                        <h4>Merge Conficts</h4>
+                        <p>simplest method for fixing a conflict is to edit the conflicting file and fix problem.</p>
+
+                    </article>
+
+                    <article>
+                        <h3>Working with Remote Repositories</h3>
+
+                        <h4>Push / Pull</h4>
+                        <p>The act of sending changes to and from remote repositories in Git.</p>
+
+                        <h4>Reasons for having a Remote Repository</h4>
+                        <ol>
+                            <li>You intend to work on the project with a team of other contributors.</li>
+                            <li>You'd like a remote copy of your project history in case something happens to the repository on your computer.</li>
+                            <li>You'd like to have an authoritiative, "central" version of the project you're working on, and a remote repository on the neutral server serves that purpose.</li>
+                        </ol>
+
+                        <h4>Cloning</h4>
+                        <p>The act of creating a new repository that is a copy of another one.</p>
+
+                        <h4>Central Remote Repositories</h4>
+                        <p>It is good form to use a 'central' remote repository to help organize your project workflow; everyone on the team has the most up-to-date code and information.</p>
+
+                        <h4>Histories</h4>
+                        <p>You can merge history between two different copies of a repository much in the same way you would merge history between two branches in the same repository.</p>
+                    </article>
+
+                    <article>
+                        <h3>Cloning</h3>
+
+                        <h4>git clone repositoryName myCloneProject</h4>
+                        <p>This command clones the repository 'repositoryName' and names the clone 'myCloneProject'.<br>
+                        Creating a clone makes a link to the original.  (the original doesn't know the remote exists)</p>
+
+                        <h4>git remote</h4>
+                        <p>Inside of the clone, 'myCloneProject', this command will show all the remotes available to this remote repository.</p>
+                    
+                        <h4>git remote add cloneName ~/path</h4>
+                        <p>Using this command, the original is linked to the clone.  They can talk to each other.<br>
+                        Run 'git remote' to verify that it worked.</p>
+                    </article>
+
+                    <article>
+                        <h3> Pushing and Pulling</h3>
+
+                        <h4>git push origin branch</h4>
+                        <p>When pushing to the remote, use 'git push origin' and the branch name you're working on.</p>
+
+                        <h4>git pull origin branch</h4>
+                        <p>pull from the origin</p>
+                    </article>
+
+                    <article>
+                        <h3>A Day in the Life of a Git</h3>
+
+                        <h4>Master Branch</h4>
+                        <p>The canonical branch.  This is finished, working, and ready to go into the production version of the site.</p>
+
+                        <h4>Feature Branches</h4>
+                        <p>Any time you add a new feature, big refactor/redesign, or substantial change, always make a branch.</p>
                     </article>
 
 
