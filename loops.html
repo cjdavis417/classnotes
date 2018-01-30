@@ -62,6 +62,40 @@ document.write("&#60;p&#62;It took the computer " + attemps + " attempts to get 
                     </div>
                 </article>
 
+                <article>
+                    <h3>Do...While Loop</h3>
+                    <p>why? the loop will always run at least once until the condition is true.</p>
+
+                    <pre>
+                        <code>
+var randomNumber = getRandomNumber(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumber(upper) {
+    var num = Math.floor(Math.random() * upper) + 1;
+    return num;
+}
+
+do {
+    guess = prompt("I'm thinking of a number between 1 and 10.  What is it?");
+    guessCount += 1;
+    if (parseInt(guess) === randomNumber) {
+        correctGuess = true;
+    }
+
+} while( ! correctGuess)
+document.write('&#60;h4&#62;You guessed the number!&#60;h4&#62;');
+document.write('&#60;h4&#62;It took you ' + guessCount + ' tries to guess the number ' + randomNumber + '&#60;/h4&#62;');
+                        </code>
+                    </pre>
+                    <div class="code-ran">
+                            <script src="scripts/dowhile1.js"></script>
+                        <input type="button" id="dowhile1" value="Run Code" onclick="doWhile1()">
+                        </div>
+                </article>
+
             </div>
         </main>
         <footer>
