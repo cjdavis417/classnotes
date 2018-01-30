@@ -70,6 +70,7 @@ header {
 .wrapper {
     width: 800px;
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -95,7 +96,16 @@ pre {
 
 code {
       font-family: 'VT323', monospace;
-      font-size: 20px;
+      font-size: 16px;
+  }
+
+  .code-ran {
+      border: dashed white 2px;
+      margin-bottom: 5px;
+      padding: 0 5px;
+      text-align: left;
+      color: white;
+      text-shadow: 0 0 5px black;
   }
 
 footer {
