@@ -21,3 +21,5 @@ function getRandomNumber(upper) {
     var num = Math.floor(Math.random() * upper) + 1;
     return num;
 }
+
+

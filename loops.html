@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Javascript</title>
+        <title>Code Louisville - Javascript</title>
         <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
         <link rel="stylesheet" href="styles/main.css">
     </head>
@@ -25,12 +25,28 @@
             
                 <article>
                     <h3>While Loop</h3>
+                    <p>The basic while loop:</p>
                     <pre>
                         <code>
+var num = 25;
 while (num > 20 ) {
     alert(num);
-    num += 1;
+    num -= 1;
 }
+                        </code>
+                    </pre>
+                </article>
+
+                <article>
+                    <h3>Do...While Loop</h3>
+                    <p>why? the loop will always run at least once until the condition is true.</p>
+                    <pre>
+                        <code>
+var num = 25;                            
+do {
+    alert(num);
+    num -= 1;
+} while (num > 20 )
                         </code>
                     </pre>
                 </article>
@@ -53,7 +69,7 @@ while (guess !== randomNumber) {
     attempts += 1;
 }
 
-document.write("&#60;p&#62;The random number was: " + randomNumber + "&#60;/p&#62;");
+document.write("&#60;p&#62;The random number between 0 and " + upper + " was: " + randomNumber + "&#60;/p&#62;");
 document.write("&#60;p&#62;It took the computer " + attemps + " attempts to get it right.&#60;/p&#62;");
                         </code>
                     </pre>
@@ -63,8 +79,7 @@ document.write("&#60;p&#62;It took the computer " + attemps + " attempts to get 
                 </article>
 
                 <article>
-                    <h3>Do...While Loop</h3>
-                    <p>why? the loop will always run at least once until the condition is true.</p>
+                    <h3>Do...While Mini Program</h3>
 
                     <pre>
                         <code>
@@ -94,6 +109,36 @@ document.write('&#60;h4&#62;It took you ' + guessCount + ' tries to guess the nu
                             <script src="scripts/dowhile1.js"></script>
                         <input type="button" id="dowhile1" value="Run Code" onclick="doWhile1()">
                         </div>
+                </article>
+
+                <article>
+                    <h3>For Loop</h3>
+                    <p>For loops are usually used to run something a particular number of times.  Used frequently with arrays.</p>
+                    <pre>
+                        <code>
+for (var counter = 0; counter &#60; 10; counter +=1){
+    document.write(counter);
+}
+                        </code>
+                    </pre>
+                </article>
+
+                <article>
+                    <h3>For loop mini program</h3>
+                    <pre>
+                        <code>
+var html = " ";
+
+for (var i = 1; i &#60;= 10; i += 1) {
+    html += "&#60;h4 class='compress'&#62;" + i + "&#60;/h4&#62;";
+}
+                                
+document.write(html);
+                        </code>
+                    </pre>
+                    <div class="code-ran">
+                        <script src="scripts/forloop1.js"></script>
+                    </div>
                 </article>
 
             </div>

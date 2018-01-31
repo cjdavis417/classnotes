@@ -12,6 +12,6 @@ while (guess !== randomNumber) {
     attempts += 1;
 }
 
-document.write("<h4>The random number was: " + randomNumber + "</h4>");
+document.write("<h4>The random number between 0 and " + upper + " was: " + randomNumber + "</h4>");
 document.write("<h4>It took the computer " + attempts + " attempts to get it right.</h4>");
                         
