@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Code Louisville - Javascript</title>
+        <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="button-to-top" title="Go to top">Top &#x21EA;</button>
+        <div class="main-body">
+            <header>
+                <h1>Front End Development
+                <br>Javascript - Objects</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="consolenotes.html">Console</a></li>
+                        <li><a href="gitbasics.html">GIT Basics</a></li>
+                        <li><a href="github.html">GIT Hub</a></li>
+                        <li><a href="ruby.html">Ruby</a></li>
+                        <li><a href="javascript.html">Javascript</a></li>
+                    </ul>
+                </nav>
+                </header>
+        
+            <main>
+                <div class="wrapper">
+
+                    <article>
+                        <h3>What is an object?</h3>
+                        <h4>Functions, arrays, strings, numbers, booleans can all be treated as objects.</h4>
+                        <h4>An object has properties and methods.  As an example, an array is an object.  It has a property called length that returns the number of items in the array.  It has a bunch of methods that allow you to do something to the array.</h4>
+                    </article>
+
+                    <article>
+                        <h3>Object Literal</h3>
+                        <pre><code>
+ var student = { };
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>Object with items</h3>
+                        <pre><code>
+    var student = {
+ <span class="notation">key &#8594;</span> name: "Chris", <span class="notation">&#8592; value</span>
+ <span class="notation">key &#8594;</span> grades: [80, 85, 90, 95]<span class="notation">&#8592; value</span>
+    };
+                        </code></pre>
+                        <h4>This method of coding, using carriage returns and indenting, makes it easier to read.</h4>
+                    </article>
+
+                    <article>
+                        <h3>Accessing values in an object</h3>
+                        <h4>There are 2 different ways of accessing values in an object</h4>
+                        <pre><code>
+ var person = {
+     name: 'Chris',
+     age: 39
+ };
+
+  alert(person['name']); <span class="notation">&#8592; first way</span>
+  alert(person.name); <span class="notation">&#8592; second way</span>
+                        </code></pre>
+                        <h4>The second way is the prefered, easier method.  It's called dot notation.  </h4>
+                        <h4>To change a property, use the '=' sign.</h4>
+                        <pre><code>
+ person.name = 'Jimmy';
+                        </code></pre>
+                        <h4>You can also add new properties to the object. </h4>
+                        <pre><code>
+ person.city = 'Louisville'
+                        </code></pre>
+                    
+                    </article>
+
+                    <article>
+                        <h3>For...In loop</h3>
+                        <h4>This loop is only available for object literals.</h4>
+                        <pre><code>
+ var person = {
+     name: 'Chris',
+     age: '39',
+     city: 'Louisville'
+ };
+
+ for (var i in person) {
+     console.log(i + ": " + person[i]);
+ }
+
+ // this will return:
+ name: Chris
+ age: 39
+ city: Louisville
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>Arrays and Objects</h3>
+                        <h4>You can have an array of Objects</h4>
+                        <pre><code>
+ var questions = [
+    { question: "How many are a dozen?", answer: 12 }
+    { question: "What is the hexadecimal notation for white?", answer: "#ffffff" }
+ ]; 
+
+ for (var i = 0, i &#60; questions.length; i += 1) {
+     question = questions[i].question;
+     answer = questions[i].answer;
+     console.log(question, answer)
+ };
+                        </code></pre>
+                    </article>
+
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
