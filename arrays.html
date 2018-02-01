@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+     <head>
+        <title>Code Louisville - Javascript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="button-to-top" title="Go to top">Top &#x21EA;</button>
+        <div class="main-body">
+            <header>
+                <h1>Front End Development
+                    <br>Javascript - Arrays</h1>
+                <h5 class="soft-link">|
+                    <a href="index.html">Home</a> |
+                    <a href="forms.html">Forms</a> |
+                    <a href="consolenotes.html">Console</a> |
+                    <a href="gitbasics.html">GIT Basics</a> |
+                    <a href="github.html">GIT Hub</a> |
+                    <a href="ruby.html">Ruby</a> |
+                    <a href="javascript.html">Javascript</a> |</h5>
+            </header>
+            <main>
+                <div class="wrapper">
+                    <article>
+                        <h3>Array Literal</h3>
+                        <h4>This is an empty array.</h4>
+                        <pre>
+                            <code>
+var shoppingList = [ ];
+                            </code>
+                        </pre>
+                     </article>
+
+                     <article>
+                        <h3>Array with Items</h3>
+                        <pre>
+                            <code>
+var shoppingList = [
+    'carrots', 
+    'milk', 
+    'eggs'
+];
+                            </code>
+                        </pre>
+                    </article>
+                    <article>
+                        <h3>Accessing Array Items</h3>
+                        <h4>Arrays are base 0.  The first item has a position of 0 in the array.  The second item has the position of 1. etc.</h4>
+                        <pre>
+                            <code>
+               0       1       2  
+var stuff = ['milk, 'eggs', 'bread'];
+
+console.log(stuff[0]);
+// will print milk
+
+console.log(stuff[2]);
+// will print bread
+                            </code>
+                        </pre>
+
+                        <h4>stuff.length will return the number of items in the array.</h4>
+                        <pre><code>
+var stuff = ['milk, 'eggs', 'bread'];
+stuff.length; // will return 3
+                        </code></pre>
+                        
+                    </article>
+                    
+                    <article>
+                        <h3>Adding Data to Arrays</h3>
+                        <h4>Push method:</h4>
+                        <pre>
+                            <code>
+var numbers = [1, 2, 3, 4, 5, 6];
+
+// push method to add to the end of array:
+numbers.push(7, 8, 9);
+
+// the array will now look like this:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                            </code>
+                        </pre>
+                        <h4>Unshift method</h4>
+                        <pre>
+                            <code>
+var numbers = [1, 2, 3, 4, 5, 6];
+    
+// unshift method to add to the front of array:
+numbers.push(7, 8, 9);
+    
+// the array will now look like this:
+numbers = [7, 8, 9, 1, 2, 3, 4, 5, 6];
+                            </code>
+                        </pre>
+                    </article>
+
+                    <article>
+                        <h3>Removing Item from arrays</h3>
+                        <h4>Pop method<br><br>
+                        Pop method removes the last item in the array and also returns it.  You can add it to a variable, but you don't have to if you done need to.</h4>
+                        <pre><code>
+var names = ['Jim', 'Chris', 'Bob'];
+var lastItem = names.pop();
+                        </code></pre>
+                    
+                        <h4>Shift method<br><br>
+                        Shift method removes the first item in an array and also returns it.  You can add it to a variable, but you don't have to if you don't want to.</h4>
+                        <pre><code>
+var names = ['Jim', 'Chris'];
+var firstItem = names.shift();
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>Iterating through Arrays</h3>
+                        <h4>The most common way of iterating through arrays is using the <a href="loops.html#forloop">for-loop</a>.</h4>
+                        <pre><code>
+var names = ['Bill', 'Jill', 'Phil', 'Gill'];
+
+for (var i = 0; i < names.length; i += 1) {
+    console.log(names[i]);
+}
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>Useful array methods</h3>
+                        <h4>Join method<br><br>
+                        This method joins the items in an array to a single variable.</h4>
+                        <pre><code>
+var daysInWeek =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+var daysString = daysInWeek.join(', ');
+
+console.log(daysString);
+
+// output looks like:
+// Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+                        
+                        </code></pre>
+
+                        <h4>Concat method<br><br>
+                        This method takes one array and adds a second array to create a new, third, array.  It's important to note that the original two arrays are not changed.</h4>
+
+                        <pre><code>
+var currentStudents = ['Gus', 'Gyles', 'Gert'];
+var newStudents = ['Samantha', 'Sherman', 'Sven'];
+var allStudents = currentStudents.concat(newStudents);                          
+                        </code></pre>
+
+                        <h4>indexOf method<br><br>
+                        This method returns the position of an item in an array.  If the item isn't in the array, the result will be -1.  This is handy in that it tells you if the item is in the array or not.</h4>
+                        <pre><code>
+var fruit = ['Apple', 'Orange', 'Grapefruit'];
+var position = fruit.indexOf('Grapefruit');
+
+// position will be 2
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>2-Dimensional Arrays</h3>
+                        <pre><code>
+var grades = [
+    [80, 90, 100, 95],
+    [75, 95, 85, 100],
+    [60, 80, 77, 90]
+];
+
+// to access 77:
+grades[2][2]
+                        </code></pre>
+                    </article>
+
+            
+
+
+
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
