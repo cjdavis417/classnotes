@@ -84,26 +84,46 @@ document.write("&#60;p&#62;It took the computer " + attemps + " attempts to get 
 
                     <pre>
                         <code>
-var randomNumber = getRandomNumber(10);
+// simple number guessing game.
+
+// universal variables for the game.
 var guess;
 var guessCount = 0;
 var correctGuess = false;
+var div = document.getElementById("do-while-prog");
 
+
+// this is the main function 
+function doWhile1() {
+    var randomNumber = getRandomNumber(10);
+
+    // this snippet checks to see if there was a previous game.
+    // if so, it resets everything.
+    var insideDiv = document.getElementById('game-ending');
+    if(insideDiv) {
+        refreshGame(insideDiv);
+    }
+
+    // this is the main do..while loop
+    do {
+        guess = prompt("I'm thinking of a number between 1 and 10.  What is it?");
+        guessCount += 1;
+        if (parseInt(guess) === randomNumber) {
+            correctGuess = true;
+        }
+    } while( ! correctGuess)
+
+    // when the number is quessed, this prints out the results.
+    var strMessage = '&#60;div id="game-ending"&#62;&#60;h4&#62;You guessed the number!&#60;/h4&#62;&#60;h4&#62;It took you ' + guessCount + ' tries to guess the number ' + randomNumber + '&#60;/h4&#62;&#60;/div&#62;';
+    div.innerHTML += strMessage;
+
+}
+
+// this function calculates the random number
 function getRandomNumber(upper) {
     var num = Math.floor(Math.random() * upper) + 1;
     return num;
 }
-
-do {
-    guess = prompt("I'm thinking of a number between 1 and 10.  What is it?");
-    guessCount += 1;
-    if (parseInt(guess) === randomNumber) {
-        correctGuess = true;
-    }
-
-} while( ! correctGuess)
-document.write('&#60;h4&#62;You guessed the number!&#60;h4&#62;');
-document.write('&#60;h4&#62;It took you ' + guessCount + ' tries to guess the number ' + randomNumber + '&#60;/h4&#62;');
                         </code>
                     </pre>
                     <div id="do-while-prog" class="code-ran">
