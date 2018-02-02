@@ -1,5 +1,5 @@
 # Class Notes #
-### This is a website i'm making based on my notes from a Front End Web Development course i'm taking through Code Louisville. ###
+### This is a website i'm making based on my notes from a Front End Web Development course i'm taking through [Code Louisville](https://www.codelouisville.org). ###
 
 ## Index ##
 1. Javascript code to demonstrate
