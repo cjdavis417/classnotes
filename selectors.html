@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Class Notes</title>
+        <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
+        <link rel="stylesheet" href="styles/main.css">
+        
+    </head>
+
+
+    <body>
+        <button onclick="topFunction()" id="button-to-top" title="Go to top">Top &#x21EA;</button>
+        <div class="main-body">
+            <header>
+                <h1>Front End Development
+                <br>CSS - Selectors </h1>
+                <nav id="navigator"></nav>
+            </header>
+
+            <main>
+                <div class="wrapper">
+                    <article>
+                        <h3>Substring Matching Attribute Selectors</h3>
+                        <h4>Starts with:</h4>
+                        <pre><code>
+ a[href^='http:'] {
+     color: #aaaaaa;
+ }
+                        </code></pre>
+
+                        <h4>Ends With</h4>
+                        <pre><code>
+ a[href$='http:'] {
+     color: #aaaaaa;
+ }
+                        </code></pre>
+
+                        <h4>Contains</h4>
+                        <pre><code>
+ a[href*='http:'] {
+     color: #aaaaaa;
+ }
+                        </code></pre>
+                    </article>
+
+                </div>
+            </main>
+
+            <footer>
+                <p>notes by C. Davis</p>
+            </footer>
+
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/nav.js"></script>
+    </body>
+
+</html>
