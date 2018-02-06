@@ -1,3 +1,4 @@
+// function that starts the 'to top' button.
 window.onscroll = function() {
     scrollFunction()
 };
@@ -11,7 +12,9 @@ function scrollFunction() {
     }
 }
 
+// this function activates when the button is clicked
 function topFunction() {
     document.body.scrollTop = 0;  // for safari
     document.documentElement.scrollTop = 0; // for chrome, firefox, ie, and opera
 }
+
