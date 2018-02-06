@@ -220,4 +220,12 @@ footer {
     display: block;
 }
 
+#form-convert {
+    width: 100%;
+}
+
+#code, #converted {
+    width: 100%;
+}
+
 

@@ -20,5 +20,6 @@ nav.innerHTML = '<ul>\
             <a href="arrays.html">Arrays</a>\
             <a href="objects.html">Objects</a>\
             <a href="helpful.html">Helpful Snippets</a>\
+            <a href="codeconverter.html">Code Converter</a>\
         </div></div></li>\
 </ul>';
