@@ -20,6 +20,67 @@
 
             <main>
                 <div class="wrapper">
+
+                    <article>
+                        <h3>Attribute Selectors</h3>
+
+                        <h4>This attribute selector targets any element that has a class attribute:</h4>
+                        <pre><code>
+ [class] {
+    border: solid 1px #ccc;
+ }
+                        </code></pre>
+
+                        <h4>To target an input element with a type value of submit, we write:</h4>
+                        <pre><code>
+ input[type="submit"] {
+     background-color: green;
+ }
+                        </pre></code>
+                        
+                        <h4>This targets a elements with a target value of _blank:</h4>
+                        <pre><code>
+ a[target="_blank"] {
+     color: tomato;
+ }
+                        </pre></code>
+                        
+                    </article>
+
+                    <article>
+                            <h3>Using combinators</h3>
+
+                            <ol>
+                                <li>The > combinator targets a direct child of an element</li>
+                                <li>The + combinator targets an element's immediate sibling</li>
+                                <li>The ~ combinator targets all the specified siblings that follow an element</li>
+                            </ol>
+
+                            <pre><code>
+ // direct child
+ form > a {
+     font-size: .7em;
+ }
+
+ // direct sibling
+ .btn + .btn {
+     margin-left: 20px;
+ }
+
+ // general sibling
+ h1 ~ label {
+     background: tomato;
+ }
+                            </code></pre>
+
+                    </article>
+
+                    <article>
+                        <h4>A good time to use substring matching attribute selectors and/ or 
+                                pseudo-classes is when using a content management system or framework 
+                                that gives us little to no access to the HTML</h4>
+                    </article>
+
                     <article>
                         <h3>Substring Matching Attribute Selectors</h3>
                         <h4>Starts with:</h4>
@@ -40,6 +101,53 @@
                         <pre><code>
  a[href*='http:'] {
      color: #aaaaaa;
+ }
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>Pseudo Classes</h3>
+
+                        <h4>Targets everything disabled:</h4>
+                        <pre><code>
+ :disabled {
+     background-color: #aaa;
+ }
+                        </code></pre>
+
+                        <h4>Targets the specific element disabled:</h4>
+                        <pre><code>
+ input:disabled {
+     background-color: #aaa;
+ }
+                        </code></pre>
+
+                        <h4>Targets everything checked:</h4>
+                        <pre><code>
+ :checked {
+     background-color: #aaa;
+ }
+                        </code></pre>
+
+                        <h4>Targets the specific element checked:</h4>
+                        <pre><code>
+ input:checked {
+     background-color: #aaa;
+ }
+                        </code></pre>
+
+                        <h4>Targets an element with only one child:</h4>
+                        <pre><code>
+ :only-child {
+     background-color: #aaa;
+ }
+                        </code></pre>
+
+                        <h4>Targets an empty element:<br>
+                        This is good to use to error check.</h4>
+                        <pre><code>
+ :empty {
+     background-color: #aaa;
  }
                         </code></pre>
                     </article>
