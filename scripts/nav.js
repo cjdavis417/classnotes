@@ -1,6 +1,7 @@
 var nav = document.getElementById('navigator');
 
-nav.innerHTML = '<ul>\
+nav.innerHTML = '<!- navigation is generated content from scripts/nav.js ->\
+<ul>\
     <li><a href="index.html">Home</a></li>\
     <li><div class="dropdown">HTML\
         <div class="dropdown-content">\
@@ -9,6 +10,7 @@ nav.innerHTML = '<ul>\
     <li><div class="dropdown">CSS\
             <div class="dropdown-content">\
                 <a href="selectors.html">Selectors</a>\
+                <a href="pseudoElements.html">Pseudo Elements</a>\
             </div></div></li>\
     <li><a href="consolenotes.html">Console</a></li>\
     <li><a href="gitbasics.html">GIT Basics</a></li>\

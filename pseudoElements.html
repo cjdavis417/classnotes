@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Class Notes</title>
+        <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/breakpoints.css">
+        
+    </head>
+
+
+    <body>
+        <button onclick="topFunction()" id="button-to-top" title="Go to top">Top &#x21EA;</button>
+        <div class="main-body">
+            <header>
+                <h1>Front End Development
+                <br>CSS - Pseudo Elements </h1>
+                <nav id="navigator"></nav>
+            </header>
+
+            <main>
+                <div class="wrapper">
+
+                    <article>
+                        <h4>Note: As a rule, double colons (::) should be used instead of a single colon (:). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.</h4>
+                    </article>
+
+                    <article>
+                        <h3>::first-line</h3>
+                        <h4>::first-line</h4>
+                        <pre><code>
+ p::first-line {
+     font-weight: bold;
+ }
+                        </code></pre>
+
+                        <h4>::first-letter</h4>
+                        <pre><code>
+ <span class="notation">a nice drop cap effect</span>
+ p::first-letter {
+     float: left;
+     font-size: 80px;
+     color: white;
+     padding: 5px 10px;
+     background: #384047;
+     margin: 10px 10px 0 0;
+     border-radius: 5px;
+     line-height: 1px;
+ }
+                        </code></pre>
+                        
+                    </article>
+
+                    <article>
+                        <h3>::before and ::after</h3>
+                        <h4>inserts before and after an element</h4>
+                        <pre><code>
+ img::before {
+     content: "hello"
+ }
+
+ img::after {
+     content: "goodbye"
+ }
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>attr()</h3>
+
+                        <h4>This allows you to take an attribute from and element 
+                            and display it on the web page.</h4>
+
+                            <pre><code>
+ <span class="notation">html</span>
+ &#60;img title="jpg" src="img.jpg"&#62;
+
+ <span class="notation">css</span>
+ img::after {
+     content: attr(title);
+     display: inline-block;
+ }
+
+                            </code></pre>
+                    </article>
+
+                </div>
+            </main>
+
+            <footer>
+                <p>notes by C. Davis</p>
+            </footer>
+
+        </div>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/nav.js"></script>
+    </body>
+
+</html>

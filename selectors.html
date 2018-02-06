@@ -58,17 +58,17 @@
                             </ol>
 
                             <pre><code>
- // direct child
+ <span class="notation">direct child</span>
  form > a {
      font-size: .7em;
  }
 
- // direct sibling
+ <span class="notation">direct sibling</span>
  .btn + .btn {
      margin-left: 20px;
  }
 
- // general sibling
+ <span class="notation">general sibling</span>
  h1 ~ label {
      background: tomato;
  }
@@ -153,6 +153,95 @@
                         </code></pre>
                     </article>
 
+                    <article>
+                        <h3>nth-child</h3>
+                        <h4>Allows you to selects any child</h4>
+
+                        <h4>Even Only</h4>
+                        <pre><code>
+ li:nth-child(even) {
+     background: blue;
+ }
+                        </code></pre>
+                        <h4>3rd child</h4>
+                        <pre><code>
+ li:nth-child(3) {
+     background: blue;
+ }
+                        </code></pre>
+                        <h4>basic setup meaning: B is the child selected, then a from that point forward.  'A' can also be negative to up in the children.</h4>
+                        <pre><code>
+ li:nth-child(an+b) {
+     background: blue;
+ }
+
+ li:nth-child(2n+3) {
+     background: blue;
+ }
+                        </code></pre>
+
+                        <h4>nth-of-type</h4>
+                        <pre><code>
+ <span class="notation">selects the 4th child div</span>
+ div:nth-of-type(4) {
+     background: pink;
+ }
+
+ <span class="notation">selects the last of type div</span>
+ div:nth-last-of-type(1) {
+     background: orange;
+ }
+
+ <span class="notation">selects 3rd from last type of div</span>
+ div:nth-last-of-type(3) {
+     background: orange;
+ }
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>:root and :target</h3>
+
+                        <h4>selects the root</h4>
+                        <pre><code>
+ :root {
+     background: blue;
+ }
+                        </code></pre>
+
+                        <h4>selects the targeted element</h4>
+                        <pre><code>
+ :target {
+     background: black;
+     color: white;
+ }
+                        </code></pre>
+
+                        <h4>These also work on types</h4>
+                        <pre><code>
+ img:target {
+     background: black;
+     color: white;
+ }
+                        </code></pre>
+                    </article>
+
+                    <article>
+                        <h3>:not()</h3>
+                        <h4>this explicity does NOT select #col-a, or whatever you put in there.</h4>
+                        <pre><code>
+ div:not(#col-a) {
+     border: solid 1px red;
+ }
+
+ <span class="notation">Other uses for the :not()</span>
+ input:not([type="submit"]) {
+     box-shadow: 0 0 10px black;
+ }
+                        </code></pre>
+                    </article>
+
+                    
                 </div>
             </main>
 
