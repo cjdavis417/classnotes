@@ -18,8 +18,20 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Play', sans-serif;
+    margin: 0;
+}
+
+h4 {
+    padding-top: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #bbb;
+}
+
+h4 ~ h4 {
+    border-top: 3px solid #aaa;
 }
 
 h4, h5, p, article ol li {
@@ -27,12 +39,28 @@ h4, h5, p, article ol li {
     color: #f5f5f5;
 }
 
+article ol,
+artile ul {
+    margin: 0;
+}
+
 article ol li {
     margin: 0.75em 0;
 }
 
 p {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.drop-cap::first-letter {
+    float: left;
+    font-size: 25px;
+    color: #21a39c;
+    background: white;
+    padding: 3px 5px;
+    margin: 5px;
+    border-radius: 5px;
+    line-height: 22px;
 }
 
 .mainpage-links {
@@ -108,10 +136,11 @@ header {
 
 .wrapper {
     width: 800px;
-    display: flex;
+    /* float: left; */
+    /* display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
 }
 
 article {
@@ -119,8 +148,9 @@ article {
     border: solid black 1px;
     border-radius: 5px;
     padding: 5px;
-    width: 360px;
+    width: 48.5%;
     margin: 5px 5px;
+    float: left;
 }
 
 pre {
@@ -162,6 +192,10 @@ footer {
     background-image: url("../img/headfoot.jpg");
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+}
+
+.clearfix {
+    clear: both;
 }
 
 #button-to-top {
@@ -227,4 +261,3 @@ footer {
 #code, #converted {
     width: 100%;
 }
-
