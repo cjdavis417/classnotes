@@ -1,3 +1,4 @@
+// this is the nav array
 var navHeaders = [
     home = {
         name: 'Home',
@@ -116,12 +117,14 @@ for (var i = 0; i < navHeaders.length; i++){
     } else {
         // creates li node
         var nodeLI = document.createElement('LI');
-        //creates div, adds text, and adds class
+
+        //creates div, adds header text, and adds class
         var liDiv = document.createElement('DIV');
         var liDivText = document.createTextNode(navHeaders[i].name);
         liDiv.appendChild(liDivText);
         liDiv.classList.add('dropdown');
-        // 2nd nested div
+
+        // 2nd nested div and class
         var divContent = document.createElement('DIV');
         divContent.classList.add('dropdown-content');
 
