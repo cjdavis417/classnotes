@@ -1,6 +1,3 @@
-var nav = document.getElementById('navigator');
-var navUL = document.createElement('UL');
-
 var navHeaders = [
     home = {
         name: 'Home',
@@ -96,17 +93,20 @@ var navHeaders = [
     }
 ]
 
+var nav = document.getElementById('navigator');
+var navUL = document.createElement('UL');
+
 // loops through array and creates navigation
 for (var i = 0; i < navHeaders.length; i++){
 
     if (navHeaders[i].subheader.length < 2 && navHeaders[i].name === navHeaders[i].subheader[0].name) {
         // creates li node
-        nodeLI = document.createElement('LI');
+        var nodeLI = document.createElement('LI');
         //navUL.appendChild(nodeLI);
         
         // creates anchor and link
-        linkNode = document.createElement('A');
-        textNode = document.createTextNode(navHeaders[i].name);
+        var linkNode = document.createElement('A');
+        var textNode = document.createTextNode(navHeaders[i].name);
         linkNode.appendChild(textNode);
         
         // adds link attribute
@@ -115,20 +115,20 @@ for (var i = 0; i < navHeaders.length; i++){
         nodeLI.appendChild(linkNode);
     } else {
         // creates li node
-        nodeLI = document.createElement('LI');
+        var nodeLI = document.createElement('LI');
         //creates div, adds text, and adds class
-        liDiv = document.createElement('DIV');
-        liDivText = document.createTextNode(navHeaders[i].name);
+        var liDiv = document.createElement('DIV');
+        var liDivText = document.createTextNode(navHeaders[i].name);
         liDiv.appendChild(liDivText);
         liDiv.classList.add('dropdown');
         // 2nd nested div
-        divContent = document.createElement('DIV');
+        var divContent = document.createElement('DIV');
         divContent.classList.add('dropdown-content');
 
         // builds links inside div dropdown
         for (var z = 0; z < navHeaders[i].subheader.length; z++) {
-            linkNode = document.createElement('A');
-            textNode = document.createTextNode(navHeaders[i].subheader[z].name);
+            var linkNode = document.createElement('A');
+            var textNode = document.createTextNode(navHeaders[i].subheader[z].name);
             linkNode.appendChild(textNode);
             linkNode.href = navHeaders[i].subheader[z].href;
             divContent.appendChild(linkNode);
