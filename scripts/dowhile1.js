@@ -44,7 +44,8 @@ function getRandomNumber(upper) {
 function refreshGame(element) {
     guessCount = 0;
     correctGuess = false;
-    element.parentElement.removeChild(element);
+    div.innerHTML = " ";
+    //element.parentElement.removeChild(element);
     // this last line, i could've written like: div.removeChild(element)
     // but decided to write like this to keep things more reusable.
 }
