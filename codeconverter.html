@@ -3,8 +3,6 @@
     <head>
         <title>Code Converter</title>
         <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/breakpoints.css">
     </head>
 
     <body>
@@ -17,9 +15,13 @@
             </header>
 
             <main class="wrapper">
+                <div id="convert-directions">
+                    <h3>Copy your code into the top box and press 'Convert!'</h3>
+                    <h4>The use of this tool is to take javascript and convert it to code to show nicely in your html.</h4>
+                </div>
                 <form id="form-convert">
-                    <textarea id="code" name="code"></textarea>
-                    <button type="button">Convert!</button>
+                    <textarea id="code-to-convert" name="code">doesn't work yet</textarea>
+                    <button type="button" id="convert-action">Convert!</button>
                     <textarea id="converted" name="converted"></textarea>
                 </form>
 
@@ -31,6 +33,8 @@
             </footer>
 
         </div>  
-        <script src="scripts/nav.js"></script>  
+        <script src="scripts/nav.js"></script>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/breakpoints.css">  
     </body>
 </html>

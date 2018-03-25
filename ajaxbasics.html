@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+     <head>
+        <title>Code Louisville - Javascript</title>
+        <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Play|Raleway">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- <link rel="stylesheet" href="styles/breakpoints.css"> -->
+    </head>
+    <body>
+        <button onclick="topFunction()" id="button-to-top" title="Go to top">Top &#x21EA;</button>
+            <div class="main-body">
+                <header>
+                    <h1>Front End Development
+                    <br>AJax - Basics</h1>
+                    <nav id="navigator"></nav>
+                </header>
+                <main>
+                    <div class="grid">
+                        <article>
+                            <h3>Basic Setup</h3>
+
+                            <h4>1. Create an XMLHTTP Request Object</h4>
+                                <pre><code>
+var ajCall = new XMLHttpRequest();
+                            </code></pre>
+                            
+                            <h4>2. Create a Callback Function</h4>
+                            <pre><code>   
+ajCall.onreadystatechange = function () {
+    if (ajCall.readyState === 4) {
+        document.getElementById('ajax').innerHTML = ajCall.responseText;
+    }
+};
+                            </code></pre>
+
+                            <h4>3. Open a Request</h4>
+                            <pre><code>
+ajCall.open("GET", "ajax_info.txt", true);
+                            </code></pre>
+
+                            <h4>4. Send Request to Server</h4>
+                            <pre><code>
+ajCall.send();
+                            </code></pre>
+                        </article>
+                    </div>
+                </main>
+
+                <footer>
+
+                </footer>
+
+
+        <script src="scripts/masonry.pkgd.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/nav.js"></script>
+    </body>
+</html>
